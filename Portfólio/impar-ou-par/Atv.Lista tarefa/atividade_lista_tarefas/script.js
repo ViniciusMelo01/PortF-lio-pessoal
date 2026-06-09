@@ -1,52 +1,62 @@
-var Numero = document.getElementById("NumeroInput");
-var ImparBtn = document.getElementById("ImparBtn");
-var ParBtn = document.getElementById("ParBtn");
-var StartBtn = document.getElementById("StartBtn");
+var taskInput = document.getElementById("taskInput");
+var addTaskBtn = document.getElementById("addTaskBtn");
+var taskList = document.getElementById("taskList");
 
-var user = "";
+addTaskBtn.addEventListener("click", addTask);
 
-ImparBtn.addEventListener("click", function () {
-  user = "Impar";
-  console.log("Escolha: Ímpar");
-});
+function addTask() {
+    var taskText = taskInput.value.trim();
 
-ParBtn.addEventListener("click", function () {
-  user = "Par";
-  console.log("Escolha: Par");
-});
+    if (taskText === "") {
+        alert("Digite uma tarefa!");
+        return;
+    }
 
-StartBtn.addEventListener("click", function Iniciar() {
-  if (user === "") {
-    alert("Por favor, escolha Par ou Ímpar antes de jogar!");
-    return;
-  }
+    createTask(taskText);
 
-  var valorDigitado = parseInt(Numero.value);
+    saveTasks();
 
-  if (isNaN(valorDigitado)) {
-    alert("Por favor, digite um número válido!");
-    return;
-  }
+    taskInput.value = "";
+    taskInput.focus();
+}
 
-  var oculto = Math.floor(Math.random() * 5) + 1;
-  var soma = valorDigitado + oculto;
-  var deuPar = soma % 2 === 0;
+function createTask(taskText) {
+    var li = document.createElement("li");
 
-  console.log(
-    "Você jogou: " +
-      valorDigitado +
-      " | PC jogou: " +
-      oculto +
-      " | Soma: " +
-      soma,
-  );
+    var span = document.createElement("span");
+    span.textContent = taskText;
 
-  if (deuPar && user === "Par") {
-    alert("A soma é " + soma + " (Par). Você ganhou!");
-  } else if (!deuPar && user === "Impar") {
-    alert("A soma é " + soma + " (Ímpar). Você ganhou!");
-  } else {
-    var resultadoTexto = deuPar ? "Par" : "Ímpar";
-    alert("A soma é " + soma + " (" + resultadoTexto + "). Você perdeu!");
-  }
-});
+    var removeBtn = document.createElement("button");
+    removeBtn.textContent = "X";
+    removeBtn.classList.add("remove-btn");
+
+    removeBtn.addEventListener("click", function () {
+        li.remove();
+        saveTasks();
+    });
+
+    li.appendChild(span);
+    li.appendChild(removeBtn);
+
+    taskList.appendChild(li);
+}
+
+function saveTasks() {
+    var tasks = [];
+
+    var taskSpans = document.querySelectorAll("#taskList li span");
+
+    taskSpans.forEach(function(span) {
+        tasks.push(span.textContent);
+    });
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+window.onload = function () {
+    var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    tasks.forEach(function(task) {
+        createTask(task);
+    });
+};

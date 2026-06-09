@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Capa Lista de Tarefas</title>
+  <desc id="desc">Ilustração em estilo moderno para o projeto Lista de Tarefas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1b33"/>
+      <stop offset="55%" stop-color="#174a5e"/>
+      <stop offset="100%" stop-color="#f75e5e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eff4f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="36" fill="url(#bg)"/>
+  <circle cx="660" cy="96" r="110" fill="#ffffff" opacity="0.12"/>
+  <circle cx="118" cy="398" r="150" fill="#ffffff" opacity="0.08"/>
+  <rect x="146" y="92" width="508" height="316" rx="28" fill="url(#card)" opacity="0.98"/>
+  <rect x="190" y="126" width="220" height="24" rx="12" fill="#0c1b33" opacity="0.9"/>
+  <rect x="190" y="172" width="300" height="14" rx="7" fill="#d8e1ea"/>
+  <rect x="190" y="230" width="300" height="14" rx="7" fill="#d8e1ea"/>
+  <rect x="190" y="288" width="300" height="14" rx="7" fill="#d8e1ea"/>
+  <rect x="538" y="150" width="70" height="70" rx="20" fill="#f75e5e"/>
+  <path d="M557 184l13 13 24-26" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="538" y="242" width="70" height="70" rx="20" fill="#174a5e"/>
+  <path d="M555 278h36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <text x="400" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Lista de Tarefas</text>
+</svg>
