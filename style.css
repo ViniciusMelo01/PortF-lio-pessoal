@@ -186,24 +186,26 @@ section {
 .carousel-wrapper {
   position: relative;
   padding: 0 50px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .carousel-container {
-  overflow: hidden;
+  overflow: visible;
   scroll-behavior: smooth;
 }
 
 .carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
   padding: 10px 0;
+  width: 100%;
+  transform: none !important;
+  transition: none;
 }
 
 .portfolio-item {
-  flex: 0 0 300px;
+  flex: initial;
   background: var(--surface);
   padding: 20px;
   border-radius: 8px;
@@ -244,9 +246,7 @@ section {
 }
 
 .carousel-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  display: none;
 }
 
 .carousel-buttons button {
