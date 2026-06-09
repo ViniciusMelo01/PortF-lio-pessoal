@@ -6,6 +6,7 @@ Portfólio pessoal de Vinicius Santos Melo, estudante de Análise e Desenvolvime
 
 - Lâmpada
 - Calculadora
+- Par ou Ímpar
 - Lista de Tarefas
 - Selecione um Carro
 
