@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio de Vinicius Santos Melo, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor web em formação.">
+    <title>Vinicius Santos Melo - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/icon.png">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Navegação principal">
+            <ul class="nav-links">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="burger" aria-label="Abrir menu" role="button" tabindex="0">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Alternar tema">
+            <img src="assets/moon.png" class="dark-mode-icon" alt="Modo escuro">
+            <img src="assets/sun.png" class="dark-mode-icon" alt="Modo claro" style="display: none;">
+        </button>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="hero-text">
+            <p class="eyebrow">Desenvolvedor Web em formação</p>
+            <h1>Olá, eu sou Vinicius Santos Melo.</h1>
+            <p>Sou estudante de Análise e Desenvolvimento de Sistemas pela UNIT e apaixonado por tecnologia e inovação. Estou constantemente aprendendo e buscando novos desafios na área de desenvolvimento web.</p>
+            <div class="hero-actions">
+                <a href="assets/curriculo-vinicius-santos-melo.pdf" download class="btn">BAIXAR CURRÍCULO</a>
+                <a href="https://github.com/ViniciusMelo01" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">VER GITHUB</a>
+            </div>
+        </div>
+        <img src="assets/foto-vinicius.jpeg" alt="Foto de Vinicius Santos Melo">
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2>PORTFÓLIO</h2>
+        <div class="carousel-wrapper">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <a href="Portfólio/lampada/Lâmpada - Atividade/Lampada - Atividade/index.html" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+                        <img src="assets/cover-lampada.png" alt="Projeto Lâmpada">
+                        <h3>Lâmpada</h3>
+                        <p>HTML, CSS, JS</p>
+                        <p>Projeto de interação que alterna uma lâmpada entre ligada e apagada com JavaScript.</p>
+                    </a>
+                    <a href="Portfólio/calculadora/atividade/atividade/index.html" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+                        <img src="assets/cover-calculadora.png" alt="Projeto Calculadora">
+                        <h3>Calculadora</h3>
+                        <p>HTML, CSS, JS</p>
+                        <p>Calculadora funcional para operações matemáticas básicas, com interface digital.</p>
+                    </a>
+                    <a href="Portfólio/impar-ou-par/Atv.Lista tarefa/atividade_lista_tarefas/index.html" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+                        <img src="assets/cover-impar-ou-par.png" alt="Projeto Jogo de Par ou Ímpar">
+                        <h3>Jogo de Par ou Ímpar</h3>
+                        <p>HTML, CSS, JS</p>
+                        <p>Jogo simples em que o usuário escolhe par ou ímpar e disputa contra o computador.</p>
+                    </a>
+                    <a href="Portfólio/selecione-um-carro/SELECIONE UM CARRO/index.html" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+                        <img src="assets/cover-selecione-carro.png" alt="Projeto Selecione um Carro">
+                        <h3>Selecione um Carro</h3>
+                        <p>HTML, CSS, JS</p>
+                        <p>Experiência interativa para escolher carros, acelerar, desacelerar e visualizar a corrida.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button class="prev" type="button" aria-label="Projeto anterior">‹ Anterior</button>
+                <button class="next" type="button" aria-label="Próximo projeto">Próximo ›</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>SKILLS</h2>
+        <div class="skill">
+            <div class="label">HTML</div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%;">90%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="label">CSS</div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%;">90%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="label">JAVASCRIPT</div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%;">50%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="label">PYTHON</div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%;">20%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="label">REACT</div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%;">20%</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>CONTATO</h2>
+        <div class="contact-container">
+            <div class="map-container">
+                <iframe
+                    title="Localização aproximada"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.8948527524153!2d-37.07951712408035!3d-10.971308689189572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab17376de3a13%3A0xdc179b0e5e69f916!2sBem%20Viver%20Residencial%20Clube!5e0!3m2!1spt-BR!2sbr!4v1748649735482!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="form-container">
+                <div class="contact-links">
+                    <a href="mailto:vini12se@gmail.com">vini12se@gmail.com</a>
+                    <a href="https://wa.me/5579988654214" target="_blank" rel="noopener noreferrer">(79) 98865-4214</a>
+                </div>
+                <form id="contactForm">
+                    <input type="text" name="nome" placeholder="Nome" required />
+                    <input type="email" name="email" placeholder="E-mail" required />
+                    <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/ViniciusMelo01" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.instagram.com/vini_melo04?igsh=MTUwNjlqcXp5bnB0dA==" target="_blank" rel="noopener noreferrer">
+                <span>Instagram</span>
+            </a>
+            <a href="mailto:vini12se@gmail.com">
+                <span>E-mail</span>
+            </a>
+            <a href="https://wa.me/5579988654214" target="_blank" rel="noopener noreferrer">
+                <span>WhatsApp</span>
+            </a>
+        </div>
+        <p>Vinicius Santos Melo ©2026 All rights reserved</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
